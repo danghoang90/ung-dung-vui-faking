@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="text-align: center">
+ <h1 style="text-align: center">Hãy Gõ Gì Bạn Muốn</h1>
+    <form name="fo">
+ <textarea name="txt" id="hien" cols="40" rows="10" onkeydown="textarea();"></textarea>
+    </form>
+ </div>
+ <script>
+     let text = ["B","Ạ","N"," ","Đ","Ã"," ","B","Ị"," ","L","Ừ","A"],n ="";
+     function textarea(){
+        a = document.fo.txt.value;
+        if (a.length > 0){
+            for (let i = 0 ; i< a.length ; i++){
+                n = n + text[i];
+             if ( i == 14){
+                document.fo.txt.value = "";
+                n = "";
+                 }
+            }
+        } document.fo.txt.value = n;
+         n = "";
+         setTimeout("textarea()",1);
+     }
+ </script>
+</body>
+</html>
